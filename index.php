@@ -12,7 +12,7 @@ require_once 'tpl_head.php';
 //load template
 function loadTemplate($strId){
 
-    if($strId == '' ||  $strId == 'home'){
+    if($strId == '/' ||  $strId == 'home'){
         echo getEntryTpl();
     }else if($strId == 'content'){
         echo getContentTpl();

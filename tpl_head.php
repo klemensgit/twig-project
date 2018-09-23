@@ -6,5 +6,11 @@
 <body>
     <?php 
         include 'tpl_header.php';
-        loadTemplate($_GET['page']); //get page for load correct template
+        
+        //get page for load correct template
+        if(isset($_GET['page'])){
+            loadTemplate($_GET['page']);
+        }else{
+            loadTemplate('/'); 
+        }
     ?>
