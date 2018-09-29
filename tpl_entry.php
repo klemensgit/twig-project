@@ -1,14 +1,12 @@
-        <?php echo "name"; ?>
+    <?php 
 
-        {{ name }}
+        global $twig;
+        $tplEntry = $twig->render('templates/tpl_entry.twig');
+        echo  $tplEntry;
 
-        <ul id="menu">
-            {% for item in navigation %}
-                <li><a href="{{ item.href }}">{{ item.name }}</a></li>
-            {% endfor %}
-        </ul>
-
-        <h1>My Webpage</h1>
+        echo getProducts(); 
+    
+    ?>
 
     </body>
 </html>

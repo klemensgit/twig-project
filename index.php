@@ -9,14 +9,16 @@ $twig = new Twig_Environment($loader);
 require_once 'function_custom.php';
 require_once 'tpl_head.php';
 
+
+$_TEPLATESPATH = 'templates/';
+
 //load template
 function loadTemplate($strId){
 
     if($strId == '/' ||  $strId == 'home'){
-        echo getEntryTpl();
+        include 'tpl_entry.php';
     }else if($strId == 'content'){
-        echo getContentTpl();
-        //include 'tpl_entry.php'; 
+        include 'tpl_content.php'; 
     }else{
         echo "<h1>ERROR 404</h1>";
     }
