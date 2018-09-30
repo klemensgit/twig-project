@@ -11,14 +11,12 @@
 
     <title>Entry</title>
 </head>
-<body>
-    <?php 
-        include 'tpl_header.php';
-        
-        //get page for load correct template
-        if(isset($_GET['page'])){
-            loadTemplate($_GET['page']);
-        }else{
-            loadTemplate('/'); 
-        }
-    ?>
+<?php
+    //get page for load correct template
+    if(isset($_GET['page'])){
+        loadTemplate($_GET['page']);
+    }else{ 
+        loadTemplate('/'); 
+    }
+
+?>

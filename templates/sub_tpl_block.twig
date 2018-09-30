@@ -1,0 +1,26 @@
+{% extends "templates/tpl_news.twig" %}
+
+{% block newproducts %}
+
+<div class="container">
+    <div class="row">
+
+        <h1>{{ attribute(_context, 'sub-title') }}</h1>
+
+        {% for item in table %}
+            <div class="col-sm-4">
+                <div class="sub-wrapper">
+                    <h2>{{ item.title }}</h2>    
+                    <p>{{ item.abstract }}</p>
+                    <span>{{ item.price }}</span>
+                    {% embed 'templates/sub_small_block.twig' %} {% endembed %}
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{# {{ parent() }} #}
+
+{% endblock newproducts %}

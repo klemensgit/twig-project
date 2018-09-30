@@ -21,14 +21,27 @@ ul {
       ul li a:hover {
         text-decoration: none; }
 
-.news-wrapper {
+.news-wrapper, .sub-wrapper {
   background-color: #b8b8b8;
   height: 200px;
   padding: 15px;
   margin-bottom: 20px; }
-  .news-wrapper h1 {
+  .news-wrapper h1, .sub-wrapper h1 {
     margin-left: 0px; }
-  .news-wrapper span {
+  .news-wrapper span, .sub-wrapper span {
     font-size: 12px; }
+
+.custom-color {
+  background-color: red; }
+
+.sub-wrapper {
+  height: 250px;
+  background-color: burlywood; }
+  .sub-wrapper h2 {
+    font-size: 18px; }
+  .sub-wrapper span {
+    position: absolute;
+    bottom: 25px;
+    font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map */

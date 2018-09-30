@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+
+        <h1>{{ type }}</h1>
+        {% set i = 0 %}
+        {% set bonus = ['15%', '20%', '30%'] %}
+        {% for item in items %}
+            <div class="col-sm-6">
+                <div class="news-wrapper {% if i % 2 == 0 %} custom-color {% endif %}">
+                    <h1>{{ loop.index ~ '.' ~ attribute(item, 'title') | upper }}</h1>
+                    <span>
+                        {% if item.date != '' %} 
+                            {{ item.date }}
+                        {% else %}
+                            <strike>{{ item.price ~ ' -' ~ cycle(bonus, loop.index0)}}</strike>
+                        {% endif %}
+                    </span>
+                    <p>{{ item['abstract'] }}</p>
+                </div>
+            </div>
+        {% set i = i + 1 %}
+        {% endfor %}
+
+    </div>
+</div>
+
+
+{% block newproducts %}  {# if template extends newproducts block then is used extended block else is used parent block or code  #}
+
+    <div class="container">
+        <div class="row">
+
+            <h1>{{ attribute(_context, 'sub-title') }}</h1>
+
+            {% for item in table %}
+                <div class="col-sm-4">
+                    <div class="sub-wrapper">
+                        <h2>{{ item.title }}</h2>    
+                        <p>{{ item.abstract }}</p>
+                        <span>{{ item.date }}</span>
+                        {% embed 'templates/sub_small_block.twig' %}
+                            {% block actionbuttons %}
+                                <div class="btn btn-primary">Like</div>
+                                <div class="btn btn-primary">Share</div>
+                            {% endblock actionbuttons %}
+                        {% endembed %}
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock newproducts %}
+
+{# {{ block('newproducts') }} #} 
+
+
+
+

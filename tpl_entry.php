@@ -4,7 +4,7 @@
         $tplEntry = $twig->render('templates/tpl_entry.twig');
         echo  $tplEntry;
 
-        echo getProducts(); 
+        echo getNews(); 
     
     ?>
 

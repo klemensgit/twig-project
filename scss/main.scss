@@ -38,3 +38,21 @@ ul {
         font-size: 12px;
     }
 }
+
+.custom-color {
+    background-color: red;
+}
+
+.sub-wrapper {
+    @extend .news-wrapper;
+    height: 250px;
+    background-color: burlywood;
+    h2 {
+        font-size: 18px;
+    }
+    span {
+        position: absolute;
+        bottom: 25px;
+        font-weight: 600;
+    }
+}
