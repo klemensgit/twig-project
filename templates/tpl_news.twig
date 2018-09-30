@@ -3,7 +3,7 @@
 
         <h1>{{ type }}</h1>
         {% set i = 0 %}
-        {% set bonus = ['15%', '20%', '30%'] %}
+        {% set bonus = ['15', '20', '30'] %}
         {% for item in items %}
             <div class="col-sm-6">
                 <div class="news-wrapper {% if i % 2 == 0 %} custom-color {% endif %}">
@@ -12,7 +12,8 @@
                         {% if item.date != '' %} 
                             {{ item.date }}
                         {% else %}
-                            <strike>{{ item.price ~ ' -' ~ cycle(bonus, loop.index0)}}</strike>
+                            {# <strike>{{ item.price ~ ' -' ~ cycle(bonus, loop.index0)}}</strike> #}
+                            {{ item.price | calculatePrice(cycle(bonus, loop.index0)) | raw }}
                         {% endif %}
                     </span>
                     <p>{{ item['abstract'] }}</p>
@@ -40,7 +41,7 @@
                         <span>{{ item.date }}</span>
                         {% embed 'templates/sub_small_block.twig' %}
                             {% block actionbuttons %}
-                                <div class="btn btn-primary">Like</div>
+                                <div class="btn btn-info">Like</div>
                                 <div class="btn btn-primary">Share</div>
                             {% endblock actionbuttons %}
                         {% endembed %}

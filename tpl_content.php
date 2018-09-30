@@ -2,6 +2,7 @@
     
     <?php 
         global $twig;
+        
         $tplContent = $twig->render('templates/tpl_content.twig', array(
             'name' => 'Content page',   
         ));

@@ -35,17 +35,17 @@
             'sub-title' => 'New products',
 
             'items' => array(
-                array('title' => 'Ball', 'abstract' => 'small plastic ball', 'price' => '€12,02'),
-                array('title' => 'Clock', 'abstract' => 'premium what color clock', 'price' => '€55,99'),
-                array('title' => 'Car', 'abstract' => 'car for kids', 'price' => '€15,55'),
-                array('title' => 'Fliper', 'abstract' => 'table fliper', 'price' => '€35,98'),
-                array('title' => 'Cards', 'abstract' => 'pokemon cards', 'price' => '€5,45')
+                array('title' => 'Ball', 'abstract' => 'small plastic ball', 'price' => '12.02'),
+                array('title' => 'Clock', 'abstract' => 'premium what color clock', 'price' => '55.99'),
+                array('title' => 'Car', 'abstract' => 'car for kids', 'price' => '15.55'),
+                array('title' => 'Fliper', 'abstract' => 'table fliper', 'price' => '35.98'),
+                array('title' => 'Cards', 'abstract' => 'pokemon cards', 'price' => '5.45')
             ),
 
             'table' => array(
-                array('title' => 'Ball', 'abstract' => 'small plastic ball', 'price' => '€12,02'),
-                array('title' => 'Clock', 'abstract' => 'premium what color clock', 'price' => '€55,99'),
-                array('title' => 'Car', 'abstract' => 'car for kids', 'price' => '€15,55')
+                array('title' => 'Ball', 'abstract' => 'small plastic ball', 'price' => '12.02'),
+                array('title' => 'Clock', 'abstract' => 'premium what color clock', 'price' => '55.99'),
+                array('title' => 'Car', 'abstract' => 'car for kids', 'price' => '15.55')
             )
 
         ));

@@ -37,10 +37,17 @@ ul {
     span {
         font-size: 12px;
     }
+    span.off {
+        font-weight: bold;
+        color: green;
+    }
+    b {
+        font-size: 16px;
+    }
 }
 
 .custom-color {
-    background-color: red;
+    background-color: rgb(176, 209, 209);
 }
 
 .sub-wrapper {

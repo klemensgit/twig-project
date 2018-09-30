@@ -30,9 +30,14 @@ ul {
     margin-left: 0px; }
   .news-wrapper span, .sub-wrapper span {
     font-size: 12px; }
+  .news-wrapper span.off, .sub-wrapper span.off {
+    font-weight: bold;
+    color: green; }
+  .news-wrapper b, .sub-wrapper b {
+    font-size: 16px; }
 
 .custom-color {
-  background-color: red; }
+  background-color: #b0d1d1; }
 
 .sub-wrapper {
   height: 250px;
