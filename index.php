@@ -1,11 +1,11 @@
 <?php
 
-// twig init
+// twig init -----------------------------------------------
 require_once 'twig/vendor/autoload.php'; //twig functions
-
 
 $loader = new Twig_Loader_Filesystem('./');
 $twig = new Twig_Environment($loader);
+//------------------------------------------------------------
 
 //custom filter
 $filter = new Twig_Filter('calculatePrice', function ($value, $off = '') {
@@ -17,11 +17,12 @@ $filter = new Twig_Filter('calculatePrice', function ($value, $off = '') {
 });
 $twig->addFilter($filter);
 
+
+
+
 require_once 'function_custom.php';
 require_once 'tpl_head.php';
 
-
-$_TEPLATESPATH = 'templates/';
 
 //load template
 function loadTemplate($strId){
